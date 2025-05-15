@@ -1,9 +1,36 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Inspiration from "../../components/Inspiration.astro";
+
+export async function getStaticPaths() {
+  const url = "https://hvecoqnwfljjoovdesze.supabase.co";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2ZWNvcW53Zmxqam9vdmRlc3plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcyOTM2MTQsImV4cCI6MjA2Mjg2OTYxNH0.IfAjl-luys9EL5Kg-8Ecke1zw2PxrdbSakpWTUi5XWE";
+
+  const options = {
+    headers: {
+      apikey: key,
+    },
+  };
+
+  const request = await fetch(url, options);
+  const data = await request.json();
+
+  return data.map((item) => {
+    return {
+      params: { product: item.slug },
+      props: { item },
+    };
+  });
+}
+const { item } = Astro.props;
 ---
 
 <body>
+  <section>
+    <div class="returnbutton">
+      <a href="/cardspage"> <button>TILBAGE</button> </a>
+    </div>
+  </section>
   <Layout>
     <Inspiration />
   </Layout>

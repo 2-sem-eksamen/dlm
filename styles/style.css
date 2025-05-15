@@ -1,0 +1,84 @@
+.returnbutton {
+  color: #5e878c;
+  text-decoration: none;
+  font-family: Shippori Mincho;
+  border-bottom: 3px solid #c7d9da;
+  font-size: 1.5rem;
+}
+.returnbutton:hover {
+  background-color: #c7d9da;
+  border-bottom: none;
+  border-radius: 2px;
+  padding: 2px;
+}
+
+.primarybutton {
+  font-family: Shippori Mincho;
+  background-color: #26313d;
+  color: #ffff;
+  text-decoration: none;
+  border: solid #5e878c;
+  padding: 3px;
+  font-size: 1.5rem;
+  padding-inline: 1rem;
+}
+.primarybutton:hover {
+  background-color: #5e878c;
+  border: solid #26313d;
+}
+
+.secondarybutton {
+  font-family: Shippori Mincho;
+  background-color: #26313d;
+  color: #ffff;
+  text-decoration: none;
+  border: solid #c7d9da;
+  padding: 3px;
+  font-size: 1.5rem;
+  padding-inline: 1rem;
+}
+.secondarybutton:hover {
+  background-color: #c7d9da;
+  color: #26313d;
+  border: solid #26313d;
+}
+
+p {
+  font-family: Shippori Mincho;
+  color: #26313d;
+  font-weight: 100;
+  font-size: 1rem;
+}
+h1 {
+  font-family: Shippori Mincho;
+  color: #26313d;
+  font-weight: 900;
+  font-size: 2rem;
+}
+h2 {
+  font-family: Shippori Mincho;
+  color: #26313d;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+h3 {
+  font-family: Shippori Mincho;
+  color: #26313d;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  p {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2.3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
