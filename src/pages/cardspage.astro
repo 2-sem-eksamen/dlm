@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Infoproduct from "../components/Infoproduct.astro";
+import Cards from "../components/Cards.astro";
+import Inspiration from "../components/Inspiration.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <Layout>
+      <Infoproduct />
+      <Cards />
+      <Inspiration />
+    </Layout>
+  </body>
+</html>
