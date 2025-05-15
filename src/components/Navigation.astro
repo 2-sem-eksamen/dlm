@@ -1,0 +1,178 @@
+---
+
+---
+
+<header>
+  <nav>
+    <a href="/"><img src="../public/logo.svg" alt="logo" /></a>
+    <ul class="menu">
+      <li><a href="/about">About</a></li>
+      <li><a href="/cardspage">Products</a></li>
+      <li><a href="/event">Events</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header li {
+    margin-left: 5%;
+    list-style: none;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    display: inline;
+  }
+  header img {
+    height: 50px;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    background-color: #ffffff;
+  }
+  header {
+    background-color: #ffffff;
+  }
+
+  /************ Burgermenu **************/
+  .burger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: fixed;
+    right: 45px;
+    top: 45px;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: #c7d9da;
+    margin-bottom: 7px;
+    transition: 0.2s linear;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+    transition: 0.2s linear;
+    background-color: #26313d;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+    background-color: #26313d;
+  }
+  nav.active .menu {
+    display: block;
+    position: absolute;
+    right: 0%;
+    width: 50%;
+    top: 55px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    background-color: #ffffff;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  nav.active .menu li {
+    list-style: none;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #26313d;
+    display: block;
+  }
+
+  header .menu {
+    display: none;
+  }
+  @media screen and (min-width: 900px) {
+    header img {
+      height: 70px;
+      padding-left: 40px;
+    }
+    header {
+      height: 30px;
+    }
+    ul {
+      margin-top: 6rem;
+      text-align: right;
+      padding-right: 2rem;
+    }
+    header li a {
+      text-decoration: none;
+      font-family: Cormorant Garamond;
+      font-size: 1.5rem;
+      color: #26313d;
+      font-family: Shippori Mincho;
+      font-style: italic;
+
+    }
+    header li a:hover {
+      border-bottom:3px solid #c7d9da;
+    }
+
+    .burger {
+      display: none;
+    }
+
+    header .menu {
+      display: flex;
+      list-style: none;
+      padding-right: 100px;
+    }
+    header ul {
+      justify-content: right;
+    }
+    .menu li {
+      display: inline;
+      cursor: pointer;
+      padding-left: 70px;
+    }
+    .menu a {
+      text-decoration: none;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    nav {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+    }
+        ul {
+        margin-top: 1rem;
+        text-align: right;
+        padding-right: 2rem;
+  }
+</style>
+<script>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+
+  burger.addEventListener("click", burgerClick);
+  function burgerClick() {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  }
+  menu.addEventListener("click", menuClick);
+  function menuClick() {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  }
+</script>
