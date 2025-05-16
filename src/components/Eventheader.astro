@@ -1,0 +1,58 @@
+<section class="feed">
+  <img src="/event6.webp" alt="Vaser" />
+  <img src="/event2.webp" alt="Disken" />
+  <img src="/event3.webp" alt="butik" />
+  <img src="/event1.webp" alt="Ditte" />
+  <div class="overlay-content">
+    <h1 class="tekst-overlay">Events</h1>
+  </div>
+</section>
+
+<style>
+  .feed {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .feed img {
+    width: 25%;
+    height: auto;
+    aspect-ratio: 3/3;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+    color: #26313d;
+    padding: 1rem;
+  }
+  .tekst-overlay {
+    margin-bottom: 35px;
+    background-color: #c7d9da9e;
+    width: 130px; /* Bredde */
+    height: 25px; /* Højde */
+    padding: 10px;
+  }
+  @media (min-width: 1200px) {
+    .tekst-overlay {
+      width: 250px;
+      height: 36px;
+      padding: 10px;
+      font-size: 2rem;
+    }
+  }
+</style>
