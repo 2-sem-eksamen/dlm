@@ -1,0 +1,42 @@
+<section class="feed">
+  <img src="/inspiration1.webp" alt="solsikker" />
+  <img src="/inspiration2.webp" alt="Grene" />
+  <img src="/inspiration3.webp" alt="Vidnue" />
+  <img src="/inspiration4.webp" alt="Indefra" />
+</section>
+
+<style>
+  .feed {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .feed img {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 3/3;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 1024px) {
+    .feed img {
+      width: 25%; /* 4 kolonner på desktop */
+    }
+  }
+  @media (min-width: 1200px) {
+    .feed img {
+      width: 25%; /* 4 kolonner på desktop */
+    }
+  }
+</style>
