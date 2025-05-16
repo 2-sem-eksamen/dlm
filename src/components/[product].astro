@@ -1,7 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Inspiration from "../../components/Inspiration.astro";
-import Cards from "../../components/Cards.astro";
 
 export async function getStaticPaths() {
   const url = "https://hvecoqnwfljjoovdesze.supabase.co/rest/v1/Ditte_Lindberg_Mortensen";
@@ -46,8 +45,6 @@ const { item } = Astro.props;
       </div>
     </div>
   </div>
-  <Cards {...item} />
-
   <Inspiration />
 </Layout>
 
@@ -87,6 +84,7 @@ const { item } = Astro.props;
   .knap {
     justify-self: center;
   }
+
   @media (min-width: 900px) {
     .tilbageknap {
       margin-left: 100px;
