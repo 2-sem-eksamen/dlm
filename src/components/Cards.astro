@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "./Card.astro";
+
+const url = "https://hvecoqnwfljjoovdesze.supabase.co/rest/v1/Ditte_Lindberg_Mortensen";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2ZWNvcW53Zmxqam9vdmRlc3plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDcyOTM2MTQsImV4cCI6MjA2Mjg2OTYxNH0.IfAjl-luys9EL5Kg-8Ecke1zw2PxrdbSakpWTUi5XWE";
+
+// Henter data fra Supabase ved hjælp af fetch og sender API-nøgle i headers
+const res = await fetch(url, {
+  headers: {
+    apikey: key, // Her sendes API-nøglen med
+  },
+});
+
+// Konverterer svaret fra API'et til JSON
+const data = await res.json();
+// nedenfor sorterer jeg så card bliver vist efter id, så 1 til 9
+data.sort((a, b) => a.id - b.id);
+---
+
+<!--sektionen indeholder alle kortene.
+.map() går igennem hvert item (produkt) i data-arrayet
+  og for hvert item vises et <Card> komponent med dets indhold.
+-->
+  
+<section class="cards-container">
+  {data.map((item) => <Card item={item} />)}
+</section>
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-inline: 5%;
+
+  }
+  @media (min-width: 500px) {
+    section{
+    }
+
+  }
+
+  @media (min-width: 900px) {
+      section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    margin-inline: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+    @media (min-width: 1350px) {
+    section{    margin-inline: 220px;
+    }}
+</style>

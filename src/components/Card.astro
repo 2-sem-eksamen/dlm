@@ -1,0 +1,67 @@
+---
+const { item } = Astro.props;
+---
+
+<article class="card">
+  <a href={`/products/${item.id}`}>
+    <img src={item.image1} alt={`Image of ${item.name}`} />
+    <div class="cardinfo">
+      <p>{item.product}</p>
+      <p class="name">{item.name}</p>
+
+      <p>{item.price}DKK</p>
+    </div>
+  </a>
+</article>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    overflow: hidden;
+    height: 330px;
+    text-align: center;
+  }
+  /* .card:hover {
+    scale: 110%;
+    text-decoration: underline #c7d9da;
+    background-color: #c7d9da;
+    border-radius: 20px;
+  } */
+  .card img {
+    transition: transform 0.5s ease;
+  }
+  .card:hover {
+    text-decoration: underline #c7d9da;
+  }
+
+  .card:hover img {
+    transform: scale(1.1);
+  }
+  img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  .name {
+    font-weight: 900;
+  }
+  .cardinfo {
+    position: relative;
+    top: 0px;
+  }
+
+  @media (min-width: 900px) {
+    img {
+      height: 320px;
+    }
+    .card {
+      height: 500px;
+    }
+  }
+</style>
