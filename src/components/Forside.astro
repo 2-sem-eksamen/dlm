@@ -9,9 +9,12 @@ import Layout from "../layouts/Layout.astro";
         <img src="/forside-produkt.webp" alt="forside_image" />
       </div>
 
-      <div>
+      <div class="tekstblok">
         <h2 class="hvid">Products</h2>
         <p class="hvid">All of Ditte Lindberg Mortensen’s vases er handmade in her studio in Helsingør, Denmark. Each design is unique and none of the vases are the same. Ditte Lindberg Mortensen makes an effort in adding her personal touch to each of her designs, and this is clearly evident in her beautiful vases.</p>
+        <div class="center_knap">
+          <a href="/cardspage" class="primarybutton">See more</a>
+        </div>
       </div>
     </div>
   </div>
@@ -21,9 +24,10 @@ import Layout from "../layouts/Layout.astro";
       <div>
         <img src="/forside-event.webp" alt="forside_image" />
       </div>
-      <div>
+      <div class="tekstblok">
         <h2 class="hvid">Events</h2>
         <p class="hvid">Everyone is welcome to Ditte Lindberg Mortensen’s events, where her exclusive vases can only be purchased at these occasions. Each event draws significant attention and has become a popular attraction.</p>
+        <div class="center_knap"><a href="/event" class="primarybutton">View event</a></div>
       </div>
     </div>
   </div>
@@ -34,9 +38,10 @@ import Layout from "../layouts/Layout.astro";
         <img src="/forside-om.webp" alt="forside_image" />
       </div>
 
-      <div>
+      <div class="tekstblok">
         <h2 class="hvid">About Ditte Lindberg Mortensen</h2>
         <p class="hvid">Ditte Lindberg Mortensen is a 29-year-old ceramicist based in Helsingør, Denmark. Throughout her life, ceramics has played a significant role, and she has always been drawn to the tactile nature of the material.</p>
+        <div class="center_knap"><a href="/about" class="primarybutton">See more</a></div>
       </div>
     </div>
   </div>
@@ -65,6 +70,28 @@ import Layout from "../layouts/Layout.astro";
     color: #ffffff;
   }
 
+  .primarybutton {
+    font-family: Shippori Mincho;
+    background-color: #26313d;
+    color: #ffff;
+    text-decoration: none;
+    border: solid #5e878c;
+    padding: 3px;
+    font-size: 1.5rem;
+    padding-inline: 1rem;
+  }
+
+  .primarybutton:hover {
+    background-color: #5e878c;
+    border: solid #26313d;
+  }
+
+  .center_knap {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
   @media (min-width: 900px) {
     .firkant {
       border-radius: 10px;
@@ -79,7 +106,7 @@ import Layout from "../layouts/Layout.astro";
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
       padding: 3rem;
-      align-items: start;
+      align-items: start; /* Ensures text aligns at the top with image */
     }
 
     .to_sider.reverse div:nth-child(1) {
@@ -95,6 +122,16 @@ import Layout from "../layouts/Layout.astro";
     img {
       border-radius: 10px;
       width: 100%;
+    }
+
+    .tekstblok {
+      align-self: start;
+    }
+
+    .center_knap {
+      text-align: left; /* eller start */
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 </style>
