@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<footer>
+  <div class="indhold">
+    <div><img src="/logo.svg" alt="logo" /></div>
+
+    <div class="adresse">
+      <p class="fed">Address</p>
+      <a href="https://www.google.com/maps?q=Stjernegade+16,+3000+Helsingør,+Danmark" target="_blank"> Stjernegade 16, 3000 Helsingør, Danmark </a>
+    </div>
+
+    <div>
+      <p class="fed">Contact</p>
+      <p>+45 27 82 99 60</p>
+      <a href="mailto:dittelindmor@gmail.com">dittelindmor@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #c7d9da;
+  }
+
+  img {
+    width: 50%;
+    margin-top: 2rem;
+  }
+
+  .fed {
+    font-weight: bold;
+  }
+
+  .adresse {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+  }
+
+  .indhold {
+    padding: 2rem;
+  }
+
+  a {
+    font-family: Shippori Mincho;
+    color: #26313d;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 900px) {
+    .indhold {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* 3 kolonner */
+      justify-items: center; /* centrér indholdet vandret */
+      align-items: start; /* sørg for at indholdet starter højt */
+      gap: 1rem; /* hvis du vil have lidt afstand mellem kolonnerne */
+    }
+
+    img {
+      width: 100%;
+      margin-top: 2rem;
+      align-items: center;
+    }
+  }
+</style>
