@@ -21,7 +21,13 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   footer {
+    position: relative;
+    overflow: hidden;
     background-color: #c7d9da;
+    background-image: url("/prikker.svg");
+    background-position: 151px -8px;
+    background-repeat: no-repeat;
+    background-size: 547px 376px;
   }
 
   img {
@@ -31,11 +37,6 @@ import Layout from "../layouts/Layout.astro";
 
   .fed {
     font-weight: bold;
-  }
-
-  .adresse {
-    margin-bottom: 3rem;
-    margin-top: 2rem;
   }
 
   .indhold {
@@ -52,16 +53,21 @@ import Layout from "../layouts/Layout.astro";
   @media (min-width: 900px) {
     .indhold {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr; /* 3 kolonner */
-      justify-items: center; /* centrér indholdet vandret */
-      align-items: start; /* sørg for at indholdet starter højt */
-      gap: 1rem; /* hvis du vil have lidt afstand mellem kolonnerne */
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: center;
+      align-items: start;
+      gap: 1rem;
     }
 
     img {
       width: 100%;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       align-items: center;
+    }
+
+    footer {
+      background-position: -30px -8px;
+      background-size: 547px 400px;
     }
   }
 </style>
