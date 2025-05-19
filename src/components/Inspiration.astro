@@ -1,3 +1,4 @@
+<h2>Inspiration</h2>
 <section class="feed">
   <img src="/inspiration1.webp" alt="solsikker" />
   <img src="/inspiration2.webp" alt="Grene" />
@@ -6,6 +7,9 @@
 </section>
 
 <style>
+  h2 {
+    text-align: center;
+  }
   .feed {
     display: flex;
     flex-wrap: wrap;
@@ -29,14 +33,9 @@
     box-sizing: border-box;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 900px) {
     .feed img {
-      width: 25%; /* 4 kolonner på desktop */
-    }
-  }
-  @media (min-width: 1200px) {
-    .feed img {
-      width: 25%; /* 4 kolonner på desktop */
+      width: 25%;
     }
   }
 </style>
