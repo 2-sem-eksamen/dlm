@@ -22,16 +22,49 @@ data.sort((a, b) => a.id - b.id);
 .map() går igennem hvert item (produkt) i data-arrayet
   og for hvert item vises et <Card> komponent med dets indhold.
 -->
-  
+  <div class="infostribe">
+    <p></p>
+  </div>
+  <section class="infoproduct">
+<div>
+<h1>Products</h1>
+<p>Unique handmade ceramics</p>
+</div>
+
+  </section>
 <section class="cards-container">
   {data.map((item) => <Card item={item} />)}
 </section>
 <style>
+.infoproduct{
+  background-color: #c7d9da;
+  margin: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0;
+  height: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.infoproduct h1{
+  padding: 0;
+margin: 0;
+justify-content:first baseline;
+}
+.infostribe{
+    background-color: #5e878c;
+  margin: 0;
+  height: 30px;
+}
+
   section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-inline: 5%;
+        padding-top: 20px;
 
   }
   @media (min-width: 500px) {
