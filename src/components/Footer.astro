@@ -15,6 +15,14 @@ import Layout from "../layouts/Layout.astro";
       <p class="fed">Contact</p>
       <p>+45 27 82 99 60</p>
       <a href="mailto:dittelindmor@gmail.com">dittelindmor@gmail.com</a>
+      <div class="ikoner">
+        <a href="https://www.instagram.com/ditte_lindberg_mortensen/">
+          <img class="ikon" src="/insta.svg" alt="Instagram" />
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100053814079343&locale=da_DK">
+          <img class="ikon" src="/facebook.svg" alt="Facebook" />
+        </a>
+      </div>
     </div>
   </div>
 </footer>
@@ -25,13 +33,23 @@ import Layout from "../layouts/Layout.astro";
     overflow: hidden;
     background-color: #c7d9da;
     background-image: url("/prikker.svg");
-    background-position: 151px -8px;
+    background-position: 196px -10px;
     background-repeat: no-repeat;
-    background-size: 547px 376px;
+    background-size: 690px 530px;
+  }
+
+  .indhold {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   img {
     width: 50%;
+    margin-top: 2rem;
+  }
+
+  .adresse {
+    margin-bottom: 2rem;
     margin-top: 2rem;
   }
 
@@ -48,6 +66,16 @@ import Layout from "../layouts/Layout.astro";
     color: #26313d;
     font-weight: 100;
     font-size: 1rem;
+  }
+
+  .ikoner {
+    display: flex;
+    gap: 15px; /* ✅ her virker det */
+  }
+
+  .ikon {
+    width: 40px;
+    display: block; /* eller inline-block */
   }
 
   @media (min-width: 900px) {
@@ -68,6 +96,14 @@ import Layout from "../layouts/Layout.astro";
     footer {
       background-position: -30px -8px;
       background-size: 547px 400px;
+    }
+
+    .ikon {
+      width: 50px;
+    }
+
+    .adresse {
+      margin-top: 0rem;
     }
   }
 </style>
