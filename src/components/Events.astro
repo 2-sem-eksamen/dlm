@@ -19,57 +19,56 @@
     </div>
     <img src="/Hero3.webp" alt="Vaser" />
   </div>
-
-  <style>
-    .card {
-      background-color: #5e878c;
-      margin: 20px;
-      border-radius: 20px;
-      margin-top: 50px;
-      padding: 1rem;
-    }
-    img {
-      order: -1;
-      width: 100%;
-      border-radius: 15px;
-    }
-    p {
-      margin: 10px;
-      color: white;
-      padding-bottom: 5px;
-    }
-    h2 {
-      margin: 10px;
-      color: white;
-      margin-top: 25px;
-    }
+</section>
+<style>
+  .card {
+    background-color: #5e878c;
+    margin: 20px;
+    border-radius: 20px;
+    margin-top: 50px;
+    padding: 1rem;
+  }
+  img {
+    order: -1;
+    width: 100%;
+    border-radius: 15px;
+  }
+  p {
+    margin: 10px;
+    color: white;
+    padding-bottom: 5px;
+  }
+  h2 {
+    margin: 10px;
+    color: white;
+    margin-top: 25px;
+  }
+  .grid-1_1 {
+    display: grid;
+  }
+  @media (min-width: 900px) {
     .grid-1_1 {
       display: grid;
-    }
-    @media (min-width: 900px) {
-      .grid-1_1 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-
-      p,
-      h2 {
-        margin-left: 20px;
-      }
+      grid-template-columns: 1fr 1fr;
+      vertical-align: top;
     }
 
-    @media (min-width: 1024px) and (max-width: 1500px) {
-      .card {
-        width: 781px;
-        place-self: center;
-      }
-      img {
-        margin-top: 10px;
-        place-self: center;
-      }
-      p {
-        place-self: center;
-      }
+    img {
+      order: 0;
     }
-  </style>
-</section>
+  }
+
+  @media (min-width: 1024px) and (max-width: 1500px) {
+    .card {
+      width: 781px;
+      place-self: center;
+    }
+    img {
+      margin-top: 10px;
+      place-self: center;
+    }
+    p {
+      place-self: center;
+    }
+  }
+</style>
