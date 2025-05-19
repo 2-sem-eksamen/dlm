@@ -24,7 +24,9 @@ import Layout from "../layouts/Layout.astro";
       <div class="tekstblok">
         <h2 class="hvid">Events</h2>
         <p class="hvid">Everyone is welcome to Ditte Lindberg Mortensen’s events, where her exclusive vases can only be purchased at these occasions. Each event draws significant attention and has become a popular attraction.</p>
-        <div class="center_knap"><a href="/event" class="secondarybutton">View event</a></div>
+        <div class="center_knap">
+          <a href="/event" class="secondarybutton">View event</a>
+        </div>
       </div>
     </div>
   </div>
@@ -36,7 +38,9 @@ import Layout from "../layouts/Layout.astro";
       <div class="tekstblok">
         <h2 class="hvid">About Ditte Lindberg Mortensen</h2>
         <p class="hvid">Ditte Lindberg Mortensen is a 29-year-old ceramicist based in Helsingør, Denmark. Throughout her life, ceramics has played a significant role, and she has always been drawn to the tactile nature of the material.</p>
-        <div class="center_knap"><a href="/about" class="secondarybutton">See more</a></div>
+        <div class="center_knap">
+          <a href="/about" class="secondarybutton">See more</a>
+        </div>
       </div>
     </div>
   </div>
@@ -50,7 +54,7 @@ import Layout from "../layouts/Layout.astro";
 
   .firkant {
     background-color: #5e878c;
-    padding: 1rem;
+    padding: 2rem;
     gap: 10px;
     margin-bottom: 1rem;
     margin: 2rem;
@@ -74,7 +78,9 @@ import Layout from "../layouts/Layout.astro";
     padding: 3px;
     font-size: 1.5rem;
     padding-inline: 1rem;
+    margin-bottom: 4rem;
   }
+
   .secondarybutton:hover {
     background-color: #c7d9da;
     color: #26313d;
@@ -83,8 +89,7 @@ import Layout from "../layouts/Layout.astro";
 
   .center_knap {
     text-align: center;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
   }
 
   @media (min-width: 900px) {
@@ -103,8 +108,6 @@ import Layout from "../layouts/Layout.astro";
       padding: 1rem;
       align-items: start;
     }
-    .to_sider.reverse {
-    }
 
     .to_sider.reverse div:nth-child(1) {
       grid-column: 2;
@@ -122,21 +125,15 @@ import Layout from "../layouts/Layout.astro";
       object-fit: cover;
     }
 
-    .tekstblok,
-    h2 {
-      align-self: start;
-      margin-top: 0;
-    }
     .tekstblok {
-      display: grid;
-      justify-self: baseline;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
 
     .center_knap {
-      text-align: left; /* eller start */
-      align-self: end;
-      justify-self: baseline;
-      margin-bottom: 0;
+      text-align: left;
+      margin-top: auto;
     }
   }
 </style>
