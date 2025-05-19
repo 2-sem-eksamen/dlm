@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<section class="lottie">
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <dotlottie-player src="https://lottie.host/0266249a-f1ae-4e76-b2df-98f9c2de8870/yCHn9MH4ew.lottie" background="transparent" speed="1" loop autoplay> </dotlottie-player>
+  <div class="streg"></div>
+</section>
+
+<style>
+  .lottie {
+    width: 100vw;
+  }
+
+  .lottie dotlottie-player {
+    display: block;
+    width: 100vw;
+    height: auto;
+  }
+
+  .streg {
+    width: 100vw;
+    height: 30px;
+    background-color: #c7d9da;
+  }
+</style>
