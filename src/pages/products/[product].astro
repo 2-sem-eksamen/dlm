@@ -46,101 +46,46 @@ const { item } = Astro.props;
       </div>
     </div>
   </div>
-  <Cards {...item} />
 
+  <div class="infostribe">
+    <p></p>
+  </div>
+  <section class="infoproduct">
+    <div>
+      <p></p>
+    </div>
+  </section>
   <Inspiration />
-</Layout>
 
-<style>
-  .tilbageknap {
-    padding-bottom: 20px;
-    margin-left: 15px;
-  }
-  img {
-    width: 100%;
-  }
-  .indhold {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px;
-    margin-inline: 20px;
-  }
-  .img-container {
-    grid-column: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-  }
-  .img1 {
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  .info {
-    display: grid;
-    grid-template-rows: 1fr 1fr 3fr 1fr;
-    max-height: 84%;
-    margin-top: -100px;
-    gap: 0px;
-  }
-  .knap {
-    justify-self: center;
-  }
-  @media (min-width: 900px) {
+  <style>
+    .infoproduct {
+      background-color: #c7d9da;
+      margin: 0;
+      text-align: center;
+      display: grid;
+      gap: 0;
+      height: 70px;
+      margin-bottom: 20px;
+    }
+
+    .infostribe {
+      background-color: #5e878c;
+      margin: 0;
+      height: 30px;
+    }
     .tilbageknap {
-      margin-left: 100px;
+      padding-bottom: 20px;
+      margin-left: 15px;
     }
     img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
     .indhold {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      gap: 30px;
-      margin-inline: 100px; /**/
-    }
-    .img-container {
-      grid-column: 1;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 3fr 1fr;
-      gap: 10px;
-      max-height: 500px;
-    }
-    .img1 {
-      grid-column: 1/3;
-      grid-row: 1/2;
-    }
-    .info {
-      display: grid;
-      grid-template-rows: 1fr 1fr 3fr 1fr;
-      max-height: 63%;
-      margin-top: 0px;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .tilbageknap {
-      padding-top: 30px;
-      padding-bottom: 30px;
-      margin-left: 150px;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .indhold {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      gap: 50px;
-      margin-inline: 150px;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px;
+      margin-inline: 20px;
     }
     .img-container {
       grid-column: 1;
@@ -156,8 +101,85 @@ const { item } = Astro.props;
     .info {
       display: grid;
       grid-template-rows: 1fr 1fr 3fr 1fr;
-      max-height: 95%;
-      margin-top: 0px;
+      max-height: 84%;
+      margin-top: -100px;
+      gap: 0px;
     }
-  }
-</style>
+    .knap {
+      justify-self: center;
+    }
+    @media (min-width: 900px) {
+      .tilbageknap {
+        margin-left: 100px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .indhold {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 30px;
+        margin-inline: 100px; /**/
+      }
+      .img-container {
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3fr 1fr;
+        gap: 10px;
+        max-height: 500px;
+      }
+      .img1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+      .info {
+        display: grid;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
+        max-height: 63%;
+        margin-top: 0px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .tilbageknap {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-left: 150px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .indhold {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 50px;
+        margin-inline: 150px;
+      }
+      .img-container {
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+      }
+      .img1 {
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+      .info {
+        display: grid;
+        grid-template-rows: 1fr 1fr 3fr 1fr;
+        max-height: 95%;
+        margin-top: 0px;
+      }
+    }
+  </style>
+</Layout>
