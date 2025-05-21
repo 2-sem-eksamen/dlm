@@ -39,7 +39,11 @@ const { item } = Astro.props;
     </div>
     <div class="info">
       <h1>{item.name}</h1>
-      <p>{item.price} DKK</p>
+      <div>
+        <p>{item.price} DKK</p>
+        <p>{item.size}</p>
+      </div>
+
       <p>{item.info}</p>
       <div class="knap">
         <a class="primarybutton" href="/event">View event</a>
