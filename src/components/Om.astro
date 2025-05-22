@@ -3,11 +3,13 @@
 ---
 
 <h1>About Ditte Lindberg Mortensen</h1>
+<section class="card">
+  <div class="grid-1-1">
+    <img class="billede" src="/om.webp" alt="Billede af Ditte" />
+    <p>Ditte Lindberg Mortensen, a 29-year-old ceramicist from Helsingør, Denmark, grew up in a creative, large family where she was encouraged to pursue her passions—whether that was mechanics or working with clay.<br /><br /> Her grandfather, a ceramist with a shop in Helsingør, greatly influenced her artistic path. Ditte studied ceramics at a folk high school on Bornholm, further developing her craft. She values the process of creating art, believing the journey should be visible in the final piece. Inspired by nature, Ditte often captures images of leaves and sketches them, drawing from their shapes and textures for her ceramics.</p>
+  </div>
+</section>
 
-<div class="tekst_boks">
-  <img src="/om_Ditte_billede.webp" alt="Billede af Ditte" />
-  <p>Ditte Lindberg Mortensen, a 29-year-old ceramicist from Helsingør, Denmark, grew up in a creative, large family where she was encouraged to pursue her passions—whether that was mechanics or working with clay.<br /><br /> Her grandfather, a ceramist with a shop in Helsingør, greatly influenced her artistic path. Ditte studied ceramics at a folk high school on Bornholm, further developing her craft. She values the process of creating art, believing the journey should be visible in the final piece. Inspired by nature, Ditte often captures images of leaves and sketches them, drawing from their shapes and textures for her ceramics.</p>
-</div>
 <div class="mid_section">
   <div class="infostribe"></div>
   <section class="infoproduct"></section>
@@ -21,7 +23,7 @@
     margin-top: 60px;
   }
 
-  .tekst_boks {
+  .card {
     background-color: #5e878c;
     padding: 2rem;
     gap: 10px;
@@ -36,9 +38,9 @@
     object-fit: cover;
   }
 
-  .tekst_boks p {
+  p {
     max-width: 50ch;
-    padding: 17px 8px 0 50px;
+    padding: 0px 8px 0 0;
     color: white;
   }
 
@@ -69,33 +71,35 @@
     height: 10px;
   }
 
-
-
   @media (min-width: 900px) {
-
-
     h1 {
       margin-bottom: 0;
     }
-    .tekst_boks img {
-      width: 70%;
-      object-fit: cover;
-      height: 300px;
-      border-radius: 25px;
-      margin: 30px 0px 30px 130px;
 
-
-
+    .card {
+      margin-inline: 10rem;
     }
-    .tekst_boks p {
+
+    img {
+      width: 80%;
+      object-fit: cover;
+      margin: 30px 0px 30px 75px;
+    }
+    p {
       max-width: 70ch;
-      padding: 17px 8px 0 30px;
+      padding: 20px 8px 0 30px;
       color: white;
     }
 
     h2 {
       margin: 0;
-
+    }
+    .grid-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    img {
+      order: 1;
     }
   }
 </style>
