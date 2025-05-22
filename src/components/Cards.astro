@@ -32,10 +32,16 @@ data.sort((a, b) => a.id - b.id);
 </div>
 
   </section>
+    <div class="tilbageknap">
+    <a class="returnbutton" href="/">Return to home</a>
+  </div>
 <section class="cards-container">
   {data.map((item) => <Card item={item} />)}
 </section>
 <style>
+  .tilbageknap{
+    padding-left:25px
+  }
 .infoproduct{
   background-color: #c7d9da;
   margin: 0;
@@ -70,7 +76,10 @@ justify-content:first baseline;
   @media (min-width: 500px) {
     section{
     }
-
+  .tilbageknap{
+    padding-left:100px;
+    padding-top:10px;
+  }
   }
 
   @media (min-width: 900px) {
