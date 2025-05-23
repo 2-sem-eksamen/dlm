@@ -22,76 +22,80 @@ data.sort((a, b) => a.id - b.id);
 .map() går igennem hvert item (produkt) i data-arrayet
   og for hvert item vises et <Card> komponent med dets indhold.
 -->
-  <div class="infostribe">
-    <p></p>
-  </div>
-  <section class="infoproduct">
-<div>
-<h1>Products</h1>
-<p>Unique handmade ceramics</p>
+<div class="infostribe">
+  <p></p>
 </div>
-
-  </section>
-    <div class="tilbageknap">
-    <a class="returnbutton" href="/">Return to home</a>
+<section class="infoproduct">
+  <div>
+    <h1>Products</h1>
+    <p>Unique handmade ceramics</p>
   </div>
+</section>
+<div class="tilbageknap">
+  <a class="returnbutton" href="/">Return to home</a>
+</div>
 <section class="cards-container">
   {data.map((item) => <Card item={item} />)}
 </section>
 <style>
-  .tilbageknap{
+  .tilbageknap {
     margin-left: 30px;
   }
-.infoproduct{
-  background-color: #c7d9da;
-  margin: 0;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0;
-  height: 100px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.infoproduct h1{
-  padding: 0;
-margin: 0;
-justify-content:first baseline;
-}
-.infostribe{
+  .infoproduct {
+    background-color: #c7d9da;
+    margin: 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0;
+    height: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .infoproduct h1 {
+    padding: 0;
+    margin: 0;
+    justify-content: first baseline;
+  }
+  .infostribe {
     background-color: #5e878c;
-  margin: 0;
-  height: 30px;
-}
+    margin: 0;
+    height: 30px;
+  }
 
   section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-inline: 5%;
-        padding-top: 20px;
-
+    padding-top: 20px;
   }
   @media (min-width: 500px) {
-    section{
+    section {
     }
-  .tilbageknap{
-    margin-left:40px;
-    padding-top:10px;
-  }
+    .tilbageknap {
+      margin-left: 40px;
+      padding-top: 10px;
+    }
   }
 
   @media (min-width: 900px) {
-      section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
-    margin-inline: 100px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 50px;
+      margin-inline: 100px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
-    @media (min-width: 1350px) {
-    section{    margin-inline: 220px;
-    }}
+  @media (min-width: 1350px) {
+    section {
+      margin-inline: 220px;
+    }
+    .tilbageknap {
+      margin-left: 220px;
+    }
+  }
 </style>
